@@ -9,10 +9,14 @@
 //! space as needed.
 
 mod ring;
+
 pub use self::ring::*;
 
 mod buffer;
 pub use self::buffer::*;
+
+#[cfg(feature = "bytes")]
+pub mod bytes;
 
 use std::cmp;
 use std::io::{self, BufRead};
